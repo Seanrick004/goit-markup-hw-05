@@ -208,9 +208,11 @@ button {
 }
 .member-list-contacts-item:hover {
     background-color: var(--ocean);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-list-contacts-item:hover {
     background-color: var(--green);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .member-list-contacts-item-link {
     width: 100%;
@@ -235,7 +237,7 @@ button {
     justify-content: center;
     align-items: center;
     color: var(--lightslate);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-list-item {
     border-radius: 4px;
@@ -247,6 +249,9 @@ button {
 }
 .customer-list-item:hover {
     border-color: var(--ocean);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-list-item:hover .customer-list-item-link {
     color: var(--ocean);
@@ -351,6 +356,10 @@ button {
     background: var(--ocean);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
     border-color: var(--ocean);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-order-service-button:focus {
     background-color: var(--ocean);
@@ -391,6 +400,21 @@ button {
     font-weight: 500;
     line-height: 1.5em;
     letter-spacing: 0.32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link.active::after {
+    content:'';
+    height: 4px;
+    width: 100%;
+    background-color: var(--ocean);
+    border-radius: 2px;
+    position: absolute;
+    left: 0px;
+    bottom: -25px;
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+.nav-link.active {
+    color: var(--ocean);
 }
 .nav-link::after {
     content:'';
@@ -401,6 +425,7 @@ button {
     position: absolute;
     left: 0px;
     bottom: -25px;
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1)
 
 }
 .nav-lists, .contact-info-link {
@@ -614,6 +639,7 @@ footer {
 }
 .projects-lists-item:hover {
     box-shadow: box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-lists-item-container:hover {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
