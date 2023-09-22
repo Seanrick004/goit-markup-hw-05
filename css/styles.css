@@ -192,6 +192,8 @@ button {
     background-color: var(--iris);
     border-radius: 200px;
     padding: 12px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .footer-list-contacts-item {
     display: inline-block;
@@ -200,7 +202,7 @@ button {
     background-color: var(--iris);
     border-radius: 200px;
     padding: 12px;
-   
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 }
 .member-list-contacts-item-svg {
     width: 16px;
@@ -208,11 +210,9 @@ button {
 }
 .member-list-contacts-item:hover {
     background-color: var(--ocean);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-list-contacts-item:hover {
     background-color: var(--green);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .member-list-contacts-item-link {
     width: 100%;
@@ -246,12 +246,11 @@ button {
     height: 88px;
     display: block;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-list-item:hover {
     border-color: var(--ocean);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-list-item:hover .customer-list-item-link {
     color: var(--ocean);
@@ -356,10 +355,9 @@ button {
     background: var(--ocean);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
     border-color: var(--ocean);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.categories-button {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-order-service-button:focus {
     background-color: var(--ocean);
@@ -597,7 +595,7 @@ footer {
  img
  Image · 2,000 x 1,335
  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
- transition: box-shadow var(--transition-duration);
+ transition: box-shadow var(--transition-duration) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-lists-item-figure {
     position: relative;
@@ -639,7 +637,6 @@ footer {
 }
 .projects-lists-item:hover {
     box-shadow: box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-lists-item-container:hover {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -664,9 +661,8 @@ footer {
     align-items: center;
     opacity: 1;
     pointer-events: auto;
-    /* transition: visibility var(--transition-duration); */
     transition-property: visibility, opacity;
-    transition-duration: var(--transition-duration);
+    transition-duration: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .modal-content {
@@ -677,7 +673,7 @@ footer {
     border-radius: 4px;
     position: relative;
     transform: translateY(20px);
-    transition: transform var(--transition-duration);
+    transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
     max-height: 100%;
 }
 .modal.modal.is-hidden.modal-content {
@@ -700,13 +696,13 @@ footer {
     fill: var(--CORNFLOWER);
     stroke: rgba(0, 0, 0, 0.10);
     stroke-width: 1px;
-    transform: background-color var(--transition-duration); color var(--transition-duration);
+    transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1), color var(--transition-duration);
 }
 .modal-close-item-svg {
     width: 8px;
     height: 8px;
     fill: currentColor;
-    transform: background-color var(--transition-duration); color var(--transition-duration);
+    transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1), color var(--transition-duration);
 
 }
 .modal.is-hidden { 
@@ -718,6 +714,11 @@ footer {
     background-color: var(--ocean);
     border-color: var(--ocean);
     color: var(--cloud);
-    transform: background-color var(--transition-duration); color var(--transition-duration);
-
+    transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1), color var(--transition-duration);
+}
+.modal-close-item-link {
+    color: var(--navyblue);
+}
+.modal-close:hover .modal-close-item-link {
+    color: var(--cloud);
 }
